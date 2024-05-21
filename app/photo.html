@@ -1,0 +1,15 @@
+<img
+  ng-src="{{$ctrl.photoData.urls.small}}"
+  alt="{{$ctrl.photoData.alt_description}}"
+/>
+<div layout="row" layout-align="space-between center">
+  <md-button
+    target="_blank"
+    href="https://unsplash.com/@{{$ctrl.photoData.user.username}}"
+    >{{$ctrl.photoData.user.name}}</md-button
+  >
+  <div layout="row" class="likes">
+    <p>{{$ctrl.photoData.likes}}</p>
+    <md-icon md-svg-src="assets/favorite.svg"></md-icon>
+  </div>
+</div>

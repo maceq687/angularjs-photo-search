@@ -1,1 +1,17 @@
-<p>This is the partial for view 1.</p>
+<md-content layout="column" layout-align="center center">
+  <h1 class="md-display-3">Search photos</h1>
+  <search></search>
+  <div ng-if="loaded" layout="column" layout-align="center center">
+    <div
+      layout="row"
+      layout-margin
+      layout-wrap
+      layout-align="space-around center"
+    >
+      <md-card ng-repeat="result in $root.dataSource" layout="column">
+        <photo photo-data="result"></photo>
+      </md-card>
+    </div>
+    <paging></paging>
+  </div>
+</md-content>

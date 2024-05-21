@@ -1,25 +1,25 @@
-/* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+.search md-input-container {
+  margin-bottom: 4px;
 }
 
-.menu:before {
-  content: "[";
+.search md-input-container:first-child {
+  margin-top: 24px;
+  margin-left: 8px;
 }
 
-.menu:after {
-  content: "]";
+.likes md-icon {
+  margin-left: 4px;
+  margin-right: 16px;
 }
 
-.menu > li {
-  display: inline;
+.paging p {
+  margin-top: 15px;
 }
 
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+.paging md-input-container {
+  margin-left: 0px !important;
+}
+
+.paging md-select-value {
+  min-width: 40px;
 }

@@ -1,0 +1,25 @@
+<div layout="column" layout-align="center center">
+  <md-card>
+    <form name="searchForm" layout-margin ng-submit="submit()">
+      <div layout="row" class="search">
+        <md-input-container>
+          <label>Search</label>
+          <input name="term" ng-model="searchTerm" />
+        </md-input-container>
+        <md-input-container>
+          <md-button
+            type="submit"
+            matSuffix
+            class="md-icon-button md-raised"
+            aria-label="Search"
+          >
+            <md-icon
+              style="color: rgb(63, 81, 181)"
+              md-svg-src="assets/search.svg"
+            ></md-icon>
+          </md-button>
+        </md-input-container>
+      </div>
+    </form>
+  </md-card>
+</div>

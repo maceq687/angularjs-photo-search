@@ -5,12 +5,16 @@
   "description": "A starter project for AngularJS",
   "repository": "https://github.com/angular/angular-seed",
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
     "angular-loader": "^1.8.3",
     "angular-mocks": "^1.7.5",
     "cpx": "^1.5.0",
-    "http-server": "^0.11.1"
+    "http-server": "^14.1.1",
+    "jasmine-core": "^3.3.0",
+    "karma": "^6.4.3",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-firefox-launcher": "^1.1.0",
+    "karma-jasmine": "^1.1.2"
   },
   "scripts": {
     "postinstall": "npm run copy-libs",
@@ -20,6 +24,11 @@
     "prestart": "npm install",
     "start": "http-server -a localhost -p 8000 -c-1 ./app",
     "pretest": "npm install",
+    "test": "karma start karma.conf.js",
+    "test-single-run": "npm test -- --single-run",
     "update-index-async": "node --eval \"var fs=require('fs'),indexFile='app/index-async.html',loaderFile='node_modules/angular-loader/angular-loader.min.js',loaderText=fs.readFileSync(loaderFile,'utf-8').split(/sourceMappingURL=angular-loader.min.js.map/).join('sourceMappingURL=node_modules/angular-loader/angular-loader.min.js.map'),indexText=fs.readFileSync(indexFile,'utf-8').split(/\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/).join('//@@NG_LOADER_START@@\\n'+loaderText+'    //@@NG_LOADER_END@@');fs.writeFileSync(indexFile,indexText);\""
+  },
+  "dependencies": {
+    "angular-material": "^1.1.24"
   }
 }

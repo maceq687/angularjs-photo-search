@@ -1,0 +1,51 @@
+<md-card layout-align="space-around center">
+  <div layout="row" layout-margin layout-wrap class="paging">
+    <p>Items per page:</p>
+    <md-input-container>
+      <md-select
+        ng-model="perPage"
+        ng-change="onRangeChange(perPage)"
+        aria-label="Number of results per page"
+      >
+        <md-option ng-repeat="range in ranges" value="{{range}}">
+          {{range}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+    <p>Page {{$root.pageNumber}} of {{$root.totalPages}}</p>
+    <p>Order by:</p>
+    <md-input-container>
+      <md-select
+        ng-model="orderBy"
+        ng-change="onOrderChange(orderBy)"
+        aria-label="Order of the results"
+      >
+        <md-option ng-repeat="order in orders" value="{{order}}">
+          {{order}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+  <div layout="row" layout-margin layout-wrap>
+    <md-button
+      class="md-raised"
+      ng-click="firstPage()"
+      ng-disabled="$root.pageNumber == 1"
+    >
+      First page
+    </md-button>
+    <md-button
+      class="md-raised"
+      ng-click="previousPage()"
+      ng-disabled="$root.pageNumber == 1"
+    >
+      Previous page
+    </md-button>
+    <md-button
+      class="md-raised"
+      ng-click="nextPage()"
+      ng-disabled="$root.pageNumber == $root.totalPages"
+      >Next page</md-button
+    >
+  </div>
+</md-card>
